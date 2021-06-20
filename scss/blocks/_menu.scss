@@ -1,0 +1,98 @@
+.menu {
+  position: absolute;
+  right: 0;
+  top: 79px;
+  width: 180px;
+  padding-bottom: 150px;
+  background: $white-color;
+  min-height: 765px;
+  padding-left: 34px;
+  box-sizing: border-box;
+  z-index: 100;
+  display: none;
+
+  @include tablet {
+    width: auto;
+    min-height: auto;
+    padding: 5px;
+  }
+  @include mobile {
+    min-height: auto;
+    width: auto;
+    padding: 5px;
+  }
+
+  &__image {
+    border: none;
+    outline: none;
+    background: none;
+    float: right;
+    margin: 10px;
+  }
+
+  &__heading {
+    clear: both;
+    @include font(700, 14px, 17px, normal);
+    color: $black-color;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    @include flex(column);
+    clear: both;
+  }
+
+  &__list--filter,
+  &__sublist--filter {
+    display: none;
+  }
+
+  &__link {
+    display: inline-block;
+    @include font(400, 14px, 17px, normal);
+    color: $light-red-color;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-bottom: 16px;
+  }
+
+  &__link--filter {
+    position: relative;
+    width: 50%;
+    padding: 3%;
+    margin-bottom: 36px;
+    margin-top: 30px;
+  }
+
+  &__link--filter::before {
+    content: "";
+    width: 5px;
+    height: 150%;
+    background: $light-red-color;
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__sublist {
+    padding-left: 20px;
+  }
+  
+  &__sublist--filter {
+    display: none;
+  }
+  &__sublist-item {
+    margin-bottom: 12px;
+  }
+
+  &__sublist-item > a {
+    font-weight: 400;
+    color: $dusty-grey-color;
+  }
+}
+
+.menu--filter {
+  display: block;
+}

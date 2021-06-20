@@ -1,0 +1,97 @@
+.left {
+  width: 662px;
+  @include tablet {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+
+  &__cards {
+    width: 98%;
+    min-height: 724px;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    @include mobile {
+      min-height: auto;
+    }
+  }
+
+  &__cards-item {
+    margin-bottom: 40px;
+    width: 100%;
+    box-shadow: 6px 6px 20px 0 rgba(221, 221, 221, 1);
+  }
+
+  &__cards-item-close {
+    border: none;
+    outline: none;
+    background: none;
+    float: right;
+    margin: 10px;
+  }
+
+  &__cards-item-wrapper {
+    display: flex;
+
+  }
+  &__cards-item-wrapper > img {
+    @include mobile {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    min-height: 50px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    @include flex(row, space-between);
+
+    @include tablet {
+      @include flex(row, center);
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      @include flex(row, space-between);
+      margin-bottom: 40px;
+    }
+  }
+
+  &__buttons-item {
+    display: inline-block;
+    width: 235px;
+    height: 100%;
+    padding: 14px 25px;
+    box-sizing: border-box;
+    @include flex(row, center, center);
+    background-color: $white-color;
+    color: $black-color;
+    border: 1px solid $agate-grey-color;
+    @include font(400, 14px, 17px, normal);
+    text-transform: uppercase;
+
+    @include tablet {
+      margin-right: 49px;
+    }
+
+    @include mobile {
+      margin-right: 10px;
+      @include font(400, 12px, 14px, normal);
+    }
+  }
+
+  &__buttons-link:hover,
+  &__buttons-link:focus {
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  &__buttons-link:active {
+    opacity: 0.6;
+  }
+}

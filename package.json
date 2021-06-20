@@ -1,0 +1,20 @@
+{
+  "name": "ModernJS-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w",
+    "start": "node server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2"
+  }
+}

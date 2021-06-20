@@ -1,0 +1,16 @@
+.products-text-block {
+  padding: 24px 28px 20px 16px;
+
+  &__heading {
+    @include font(400, 13px, 16px, normal);
+    color: $black-color;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &__count {
+    @include font(400, 16px, 19px, normal);
+    color: $light-red-color;
+    margin-top: 18px;
+  }
+}

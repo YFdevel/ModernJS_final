@@ -1,0 +1,35 @@
+.auth-block {
+  min-height: 500px;
+
+  &__wrapper {
+    @include flex(row, space-between);
+    padding: 64px 0 112px;
+    @include mobile {
+      @include flex(column, space-around, center);
+    }
+  }
+
+  &__button {
+    width: 160px;
+    padding: 16px 25px;
+    background: $light-red-color;
+    color: $white-color;
+    text-transform: uppercase;
+    margin-top: 39px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button-img {
+    margin-left: 3px;
+    animation-duration: 0.4s;
+    animation-timing-function: step-end;
+
+  }
+  
+  &__button:hover &__button-img {
+    animation-name: auth-btn-arrow;
+  }
+
+}

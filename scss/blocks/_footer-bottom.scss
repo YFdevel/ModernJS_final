@@ -1,0 +1,45 @@
+.footer-bottom {
+  width: 100%;
+  background: $dark-color;
+  min-height: 75px;
+  padding: 18px 0 18px 0;
+  box-sizing: border-box;
+  position: relative;
+
+  @include mobile {
+    padding: 50px 0 18px 0;
+  }
+
+  &__wrapper {
+    @include flex(row, space-between);
+    @include mobile {
+      @include flex(column-reverse, center, center);
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    color: $smoky-white-color;
+  }
+
+  &__list {
+    display: flex;
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list-item {
+    width: 32px;
+    height: 32px;
+    @include flex(row, center, center);
+    box-sizing: border-box;
+    margin-right: 6px;
+  }
+
+  &__image:hover,
+  &__image:focus {
+    transform: scale(1.1, 1.1);
+  }
+}

@@ -1,0 +1,40 @@
+.advantages {
+  background: $black-grey-color;
+
+  &__list {
+    @include flex(row, space-between, center);
+    @include tablet {
+      @include flex(column, flex-start, center);
+    }
+  }
+
+  &__list-item {
+    width: 360px;
+    min-height: 340px;
+    box-sizing: border-box;
+    padding: 104px 30px 104px 30px;
+    @include flex(column, flex-start, center);
+    @include tablet {
+      padding: 48px 0;
+      min-height: auto;
+    }
+    @include mobile {
+      padding: 48px 0;
+      min-height: auto;
+      width: 90%;
+    }
+  }
+
+  &__list-heading {
+    margin-top: 19px;
+    margin-bottom: 16px;
+    @include font(400, 19.96px, 24px, normal);
+    color: $smoky-white-color;
+
+  }
+
+  &__list-text {
+    @include font(300, 14px, 17px, normal);
+    color: $smoky-white-color;
+  }
+}

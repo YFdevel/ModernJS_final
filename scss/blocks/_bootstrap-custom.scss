@@ -1,0 +1,111 @@
+.slider-container {
+  height: 724px;
+  width: 597px;
+
+  @include tablet {
+    height: 565px;
+    width: 466px;
+  }
+
+  @include mobile {
+    height: 454px;
+    width: 90%;
+  }
+}
+
+.carousel, .carousel-inner {
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.carousel-item img {
+  object-fit: contain;
+  vertical-align: middle;
+  border-style: none;
+  height: 100vh;
+  width: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  color: red;
+}
+
+.carousel-control-next--catalog,
+.carousel-control-prev--catalog {
+  display: inline-block;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  color: red;
+}
+
+.fa-angle-double-right,
+.fa-angle-double-left {
+  font-size: 30px;
+}
+
+.fa-angle-right,
+.fa-angle-left {
+  font-size: 30px;
+  color: #000;
+}
+
+.carousel-indicators {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  text-indent: 0;
+  margin-right: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.catalog-carousel {
+  position: relative;
+  padding: 40px;
+  box-sizing: border-box;
+  max-height: fit-content;
+}
+
+.carousel-inner {
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.elements-bootstrap {
+  position: absolute;
+  width: 30%;
+  height: 30px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @include mobile {
+    width: 90%;
+  }
+}

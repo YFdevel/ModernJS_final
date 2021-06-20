@@ -1,0 +1,14 @@
+.radio-block {
+  display: flex;
+
+  &__item {
+    @include flex(row, flex-start, baseline);
+    @include font(300, 11px, 13px, normal);
+    color: $black-color;
+    margin-right: 20px;
+  }
+
+  &__item input {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,71 @@
+.header {
+  width: 100%;
+  background: $dark-color;
+  min-height: 75px;
+  padding: 18px 0 18px 0;
+  box-sizing: border-box;
+  position: relative;
+
+  &__wrapper {
+    @include flex(row, space-between);
+  }
+
+  &__logo {
+    margin-right: 41px;
+  }
+
+  &__burger,
+  &__login {
+    margin-right: 34px;
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+  &__login {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__burger {
+    background-color: $dark-color;
+    border: none;
+    align-self: center;
+  }
+
+  &__burger svg {
+    fill: $white-color;
+  }
+  &__burger:active svg {
+    fill: $gold-color;
+  }
+
+  &__basket {
+    position: relative;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__basket::after {
+    content: '5';
+    color: $white-color;
+    font-size: 12px;
+    position: absolute;
+    @include flex(row, center, center);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    @include back-url-pos-rep-size('../img/busket-circle.svg', center, no-repeat, cover);
+    background-color: #f16d7f;
+    right: -12px;
+    top: -22px;
+    z-index: 100;
+  }
+
+  &__img:hover,
+  &__img:focus {
+    transform: scale(1.1, 1.1);
+  }
+}
