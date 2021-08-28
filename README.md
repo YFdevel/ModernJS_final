@@ -1,1 +1,1 @@
-ModernJS lesson-8
+ModernJS shop
