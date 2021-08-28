@@ -1,0 +1,113 @@
+.footer-top {
+  @include back-url-pos-rep-size("../img/subscribe_back.jpg", center, no-repeat, cover);
+  background-color: #d6d7d6;
+  width: 100%;
+
+  &__wrapper {
+    @include flex(row, space-between);
+    @include tablet {
+      @include flex(column, space-around, center);
+    }
+  }
+
+  &__wrapper-left,
+  &__wrapper-right {
+    min-height: 400px;
+    width: 360px;
+    @include flex(column, center, center);
+    box-sizing: border-box;
+  }
+
+  &__wrapper-left {
+    @include mobile {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__wrapper-right {
+    width: 400px;
+    padding-right: 40px;
+    @include mobile {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__text {
+    @include font(400, 20px, 24px);
+    text-align: center;
+    color: $black-grey-color;
+    margin-top: 20px;
+  }
+
+  &__text--italic {
+    @include font(400, 20px, 24px, italic);
+  }
+
+  &__heading {
+    @include font(700, 24px, 37px, normal);
+    text-align: center;
+    color: $black-grey-color;
+    text-transform: uppercase;
+    min-height: auto;
+    word-wrap: break-word;
+    width: 100%;
+  }
+
+  &__subscribe-text {
+    @include font(400, 18px, 30px);
+    text-align: center;
+    color: $black-grey-color;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    height: 40px;
+    position: relative;
+    @include tablet {
+      width: 75%;
+      margin: 0 auto 20px;
+    }
+    @include mobile {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__input {
+    display: inline-block;
+    padding: 6px 100px 6px 22px;
+    background: $pale-grey-color;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    width: 90%;
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: -5px;
+    background: $light-red-color;
+    border: none;
+    outline: none;
+    border-radius: 0 20px 20px 0;
+    height: 100%;
+    padding: 6px 12px;
+    color: $white-color;
+    box-sizing: border-box;
+    width: 30%;
+    z-index: 5;
+    @include mobile {
+      width: 30%;
+      padding: 5px 10px;
+    }
+  }
+}

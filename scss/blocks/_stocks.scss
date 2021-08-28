@@ -1,0 +1,60 @@
+.stocks {
+  padding: 63px 0 63px 0;
+
+  &__list {
+    @include flex(row, space-between);
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    width: 360px;
+    min-height: 260px;
+    @include flex(row, center, center);
+
+    @include tablet {
+      width: 32%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list-item:first-child {
+    @include back-url-pos-rep-size("../img/for_women.jpg", center, no-repeat, cover);
+  }
+
+  &__list-item:nth-child(2) {
+    @include back-url-pos-rep-size("../img/for_men.jpg", center, no-repeat, cover);
+  }
+
+  &__list-item:nth-child(3) {
+    @include back-url-pos-rep-size("../img/for_kids.jpg", center, no-repeat, cover);
+  }
+
+  &__list-accessories {
+    width: 100%;
+    min-height: 180px;
+    @include back-url-pos-rep-size("../img/accesories.jpg", center, no-repeat, cover);
+    background-color: #5b4b4a;
+    margin-top: 20px;
+    @include mobile {
+      min-height: 111px;
+    }
+  }
+
+  &__list-text {
+    @include font(400, 16px, 19px, normal);
+    text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
+  }
+
+  &__list-heading {
+    @include font(700, 24px, 29px, normal);
+    text-align: center;
+    color: $light-red-color;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,18 @@
+.radio {
+  position: relative;
+}
+
+.radio::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: $light-grey-red-color;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.radio:checked::before {
+  background: $red-orange-color;
+}

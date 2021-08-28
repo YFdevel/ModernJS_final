@@ -1,0 +1,31 @@
+.card-info {
+  width: 390px;
+  padding-left: 31px;
+  padding-top: 22px;
+  @include mobile {
+    width: 50%;
+    padding-left: 17px;
+  }
+
+  &__heading {
+    width: 220px;
+    @include font(400, 24px, 29px, normal);
+    color: $dark-color;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+    @include mobile {
+      width: 100%;
+      @include font(400, 16px, 19px, normal);
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list-item {
+    @include font(400, 22px, 26px, normal);
+    color: $graphite-color;
+    margin-bottom: 10px;
+    @include mobile {
+      @include font(400, 14px, 17px, normal);
+    }
+  }
+}

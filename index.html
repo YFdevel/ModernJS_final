@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+
+<body>
+<div id="app">
+    <header class="header">
+        <div class="header__wrapper container">
+            <div>
+                <a href="#">
+                    <img src="img/logo.svg" alt="logo" width="44" height="38" class="header__logo header__img"/>
+                </a>
+                <search-form></search-form>
+            </div>
+            <div>
+                <button type="button" class="header__burger">
+                    <svg class="header__img" width="32" height="23" viewBox="0 0 32 23"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z"/>
+                    </svg>
+                </button>
+                <a href="#" class="header__login">
+                    <img src="img/login.svg" alt="login" width="29" height="29" class="header__img"/>
+                </a>
+                <a href="#" class="header__basket btn-cart" @click="showBasket">
+                    <img src="img/basket.svg" alt="basket" width="32" height="29" class="header__img"/>
+                </a>
+
+            </div>
+        </div>
+
+    </header>
+    <main class="main">
+        <cart ref="cart"></cart>
+        <section class="brend">
+            <div class="brend__wrapper">
+                <img src="img/man.jpg" alt="man" width="801" height="764" class="brend__image"/>
+            </div>
+            <div class="brend__wrapper brend__wrapper-text">
+
+                <div class="brend__wrapper-text-inner">
+                    <h1 class="brend__heading">the brand</h1>
+                    <p class="brend__text">
+                        of luxerious <span class="change-color">fashion</span>
+                    </p></div>
+
+            </div>
+
+        </section>
+        <section class="stocks">
+            <h2 class="visually-hidden">Stocks</h2>
+            <ul class="stocks__list container">
+                <li class="stocks__list-item">
+                    <a href="#">
+                        <p class="stocks__list-text">30% off</p>
+                        <h3 class="stocks__list-heading change-color">for women</h3>
+                    </a>
+                </li>
+                <li class="stocks__list-item">
+                    <a href="#">
+                        <p class="stocks__list-text">hot deal</p>
+                        <h3 class="stocks__list-heading change-color">for men</h3>
+                    </a>
+                </li>
+                <li class="stocks__list-item">
+                    <a href="#">
+                        <p class="stocks__list-text">new arrivals</p>
+                        <h3 class="stocks__list-heading change-color">for kids</h3>
+                    </a>
+                </li>
+                <li class="stocks__list-item stocks__list-accessories">
+                    <a href="#">
+                        <p class="stocks__list-text">luxirous & trendy</p>
+                        <h3 class="stocks__list-heading change-color">accesories</h3>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+        <products ref="products"></products>
+
+        <section class="advantages">
+            <h2 class="visually-hidden">Advantages</h2>
+            <ul class="advantages__list container">
+                <li class="advantages__list-item">
+                    <img src="img/delivery.svg" alt="delivery" width="45" height="32" class="advantages__list-image"/>
+                    <h3 class="advantages__list-heading">Free Delivery</h3>
+                    <p class="advantages__list-text">
+                        Worldwide delivery on all. Authorit tively morph next-generation
+                        innov tion with extensive models.
+                    </p>
+                </li>
+                <li class="advantages__list-item">
+                    <img src="img/discount.svg" alt="discount" width="40" height="40" class="advantages__list-image"/>
+                    <h3 class="advantages__list-heading">Sales & discounts</h3>
+                    <p class="advantages__list-text">
+                        Worldwide delivery on all. Authorit tively morph next-generation
+                        innov tion with extensive models.
+                    </p>
+                </li>
+                <li class="advantages__list-item">
+                    <img src="img/assurance.svg" alt="assurance" width="47" height="35" class="advantages__list-image"/>
+                    <h3 class="advantages__list-heading">Quality assurance</h3>
+                    <p class="advantages__list-text">
+                        Worldwide delivery on all. Authorit tively morph next-generation
+                        innov tion with extensive models.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class=" footer-top__wrapper container">
+                <div class="footer-top__wrapper-left">
+                    <img src="img/subscribe_foto.svg" alt="subscribe_foto" width="100" height="100"
+                         class="footer-top__image"/>
+                    <p class="footer-top__text">
+                        “Vestibulum quis porttitor dui! Quisque
+                        <span class="footer-top__text footer-top__text--italic"> viverra nunc mi, a pulvinar
+              purus condimentum“</span>
+                    </p>
+                </div>
+                <div class="footer-top__wrapper-right">
+                    <h3 class="footer-top__heading">subscribe</h3>
+                    <p class="footer-top__subscribe-text">for our newletter and promotion</p>
+                    <form action="endpoint" class="footer-top__form">
+                        <input type="text" placeholder="Enter Your Email" class="footer-top__input"/>
+                        <button type="submit" class="footer-top__button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__wrapper container">
+                <p class="footer-bottom__text">© 2021 Brand All Rights Reserved.</p>
+                <ul class="footer-bottom__list">
+                    <li class="footer-bottom__list-item">
+                        <a href="#">
+                            <img src="img/facebook.png" alt="facebook" width="32" height="32"
+                                 class="footer-bottom__image"/>
+                        </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                        <a href="#">
+                            <img src="img/instagram.png" alt="instagram" width="32" height="32"
+                                 class="footer-bottom__image"/>
+                        </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                        <a href="#">
+                            <img src="img/pinterest.png" alt="pinterest" width="32" height="32"
+                                 class="footer-bottom__image"/>
+                        </a>
+                    </li>
+                    <li class="footer-bottom__list-item">
+                        <a href="#">
+                            <img src="img/twitter.png" alt="twitter" width="32" height="32"
+                                 class="footer-bottom__image"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/ProductComponent.js"></script>
+<script src="js/CartComponent.js"></script>
+<script src="js/FilterComp.js"></script>
+<script src="js/ErrorComp.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

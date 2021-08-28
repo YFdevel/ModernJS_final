@@ -1,0 +1,28 @@
+.cart-block {
+  min-height: 500px;
+
+  &__wrapper {
+    @include flex(row, space-between);
+    padding: 64px 0 112px;
+
+    @include tablet {
+      @include flex(column, flex-start, center);
+    }
+    @include mobile {
+      @include flex(column, flex-start, center);
+    }
+  }
+
+  &__right {
+    width: 360px;
+    @include tablet {
+      @include flex(row, space-between);
+      width: 100%;
+    }
+    
+    @include mobile {
+      @include flex(column, space-between);
+      width: 100%;
+    }
+  }
+}

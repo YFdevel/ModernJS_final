@@ -1,0 +1,44 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "jacket",
+    "desc": "cool",
+    "price": 1600,
+    "img": "./img/product1.jpg"
+  },
+  {
+    "id_product": 457,
+    "product_name": "coat",
+    "desc": "fine",
+    "price": 3000,
+    "img": "./img/product2.jpg"
+  },
+  {
+    "id_product": 123,
+    "product_name": "shirt",
+    "desc": "excellent",
+    "price": 45600,
+    "img": "./img/product3.jpg"
+  },
+  {
+    "id_product": 452,
+    "product_name": "blouse",
+    "desc": "modern",
+    "price": 1000,
+    "img": "./img/product4.jpg"
+  },
+  {
+    "id_product": 456,
+    "product_name": "T-shirt",
+    "desc": "modern",
+    "price": 800,
+    "img": "./img/product5.jpg"
+  },
+  {
+    "id_product": 446,
+    "product_name": "suit",
+    "desc": "modern",
+    "price": 1200,
+    "img": "./img/product6.jpg"
+  }
+]

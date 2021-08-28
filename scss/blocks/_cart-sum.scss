@@ -1,0 +1,56 @@
+.cart-sum {
+  width: 100%;
+  min-height: 214px;
+  padding: 44px 39px 34px 42px;
+  box-sizing: border-box;
+  background: $creame-color;
+  margin-top: 57px;
+
+  @include tablet {
+    width: 47%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+
+  &__button {
+    width: 273px;
+    min-height: 40px;
+    margin-top: 17px;
+    padding: 12px 10px;
+    background: $light-red-color;
+    color: $white-color;
+    text-transform: uppercase;
+    @include font(300, 16px, 19px, normal);
+    position: relative;
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__button::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $geinsboro-color;
+    position: absolute;
+    top: -22px;
+    left: 2px;
+  }
+
+  &__text {
+    @include font(400, 11px, 13px, normal);
+    color: $dark-grey-color;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: right;
+  }
+
+  &__text-big {
+    @include font(300, 16px, 19px, normal);
+    color: $dark-color;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+    text-align: right;
+  }
+}

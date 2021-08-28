@@ -1,0 +1,56 @@
+
+.nav-block {
+  padding: 64px 0;
+
+  &__wrapper {
+    @include flex(row, center, center);
+    position: relative;
+    @include tablet {
+      @include flex(row, flex-end, center);
+    }
+    @include mobile {
+      @include flex(row, flex-end, center);
+    }
+  }
+
+  &__dropdowns {
+    width: 50%;
+    @include flex(row, space-between, center);
+    @include mobile {
+      width: 70%;
+    }
+  }
+
+  &__filter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    padding-bottom: 50px;
+    min-height: auto;
+    background: none;
+    @include mobile {
+      width: 50%;
+      outline: none;
+    }
+  }
+
+  &__filter-title {
+    display: flex;
+    width: 50%;
+    padding: 3%;
+    box-sizing: border-box;
+    background: none;
+  }
+
+  &__filter-title-text {
+    margin-right: 11px;
+    @include font(600, 14px, 17px, normal);
+    text-transform: uppercase;
+    @include mobile {
+      margin: 0;
+      display: none;
+    }
+  }
+}
+

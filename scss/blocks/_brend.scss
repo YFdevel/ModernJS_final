@@ -1,0 +1,73 @@
+.brend {
+  width: 100%;
+  @include flex(row, center);
+
+  &__image {
+    width: 100%;
+    @include tablet {
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    width: 50%;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__wrapper-text {
+    @include flex(column, center);
+    background: $pale-pink-color;
+    padding-left: 64px;
+    box-sizing: border-box;
+    @include mobile {
+      width: 100%;
+      min-height: 347px;
+      padding: 40px;
+      @include flex(column, center, center);
+    }
+  }
+
+  &__wrapper-text-inner {
+    position: relative;
+    min-height: auto;
+    word-wrap: break-word;
+    width: 80%;
+    @include mobile {
+      width: 85%;
+    }
+  }
+
+  &__wrapper-text-inner::before {
+    content: "";
+    width: 12px;
+    height: 90%;
+    background: $light-red-color;
+    position: absolute;
+    left: -25px;
+    top: 12px;
+  }
+  
+  &__heading {
+    @include font(900, 48px, 58px, normal);
+    min-height: auto;
+    word-wrap: break-word;
+    width: 80%;
+    color: $dark-color;
+    text-transform: uppercase;
+    display: inline-block;
+    @include mobile {
+      @include font(900, 38px, 42px, normal);
+    }
+  }
+
+  &__text {
+    @include font(700, 32px, 38px, normal);
+    color: $dark-color;
+    text-transform: uppercase;
+    @include mobile {
+      @include font(700, 24px, 34px, normal);
+    }
+  }
+}
